@@ -25,7 +25,7 @@ urlpatterns = [
     path('job_title/', job_title),
     path('job_detail/<int:job_id>/', job_detail),
     # path('job_list/', job_list),
-    path('job_list/', GetJobList.as_view()),
+    path('', GetJobList.as_view()),
     # path('job_detail_list/<int:job_id>/', job_detail_list),
     path('job_detail_list/<int:job_id>/', JobDetailList.as_view()),
 ]
