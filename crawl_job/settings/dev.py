@@ -1,0 +1,22 @@
+from .base import *
+
+SECRET_KEY = 'oldp5jr+na@k@(g!dxi4#ezxuz#^1tx_llia2*o9@o$tj)_zl$'
+DEBUG = True
+
+TIME_ZONE = 'Asia/Ho_Chi_Minh'
+
+CRONJOBS = [
+    ('*/5 * * * *', 'crawl_job.cron.craw_job_scheduled')
+]
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
+}
+
+import dj_database_url
+
+prod_db = dj_database_url.config(conn_max_age=500)
+DATABASES['default'].update(prod_db)
