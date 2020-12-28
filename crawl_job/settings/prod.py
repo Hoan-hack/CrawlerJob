@@ -33,4 +33,5 @@ DATABASE_URL = "postgres://osmlrkzmdcvsha:8b85ebd07decac6f46ac11e148abc1369848ae
 # prod_db = dj_database_url.config(default=DATABASE_URL)
 # DATABASES['default'].update(prod_db)
 DATABASES = {'default': dj_database_url.config(default=DATABASE_URL)}
+os.environ['DJANGO_SETTINGS_MODULE'] = 'crawl_job.settings.prod'
 
