@@ -3,7 +3,7 @@ import time
 import re
 
 
-_RE_COMBINE_WHITESPACE = re.compile(r"(?a:\s+)")
+# _RE_COMBINE_WHITESPACE = re.compile(r"(?a:\s+)")
 
 from crawl_job.log.logg import logger
 
