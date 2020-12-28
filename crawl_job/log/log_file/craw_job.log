@@ -2918,3 +2918,4 @@ DEBUG 2020-12-23 18:17:21 selector_events 10377 4543774144 Using selector: Kqueu
 WARNING 2020-12-23 18:29:30 log 10714 123145332604928 Not Found: /favicon.ico
 WARNING 2020-12-23 18:29:42 log 10714 123145332604928 Not Found: /job_list/
 DEBUG 2020-12-23 18:29:55 selector_events 10714 4535643584 Using selector: KqueueSelector
+DEBUG 2020-12-28 10:21:31 selector_events 11774 4395666880 Using selector: KqueueSelector
