@@ -48,10 +48,11 @@ def calculate_time(time_stamp):
 
 
 def get_tag_job(tag_name):
-    beauty_tag_name = str(tag_name).strip().replace("\n", " ")
-    beauty_tag_name = _RE_COMBINE_WHITESPACE.sub(" ", beauty_tag_name)
-    beauty_tag_name.split(" ")
-    return beauty_tag_name
+    # beauty_tag_name = str(tag_name).strip().replace("\n", " ")
+    # beauty_tag_name = _RE_COMBINE_WHITESPACE.sub(" ", beauty_tag_name)
+    # beauty_tag_name.split(" ")
+    # return beauty_tag_name
+    return tag_name
 
 
 # def get_tag_job(data):
