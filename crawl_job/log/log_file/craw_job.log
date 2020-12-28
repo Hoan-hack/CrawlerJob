@@ -3007,3 +3007,6 @@ WARNING 2020-12-28 14:20:09 log 14410 123145383759872 Not Found: /job_list/
 WARNING 2020-12-28 14:20:14 log 14410 123145383759872 Not Found: /job_list/
 WARNING 2020-12-28 14:20:27 log 14410 123145383759872 Not Found: /job_list/
 DEBUG 2020-12-28 14:21:01 selector_events 14410 4766023104 Using selector: KqueueSelector
+DEBUG 2020-12-28 14:30:54 selector_events 14757 4459716032 Using selector: KqueueSelector
+DEBUG 2020-12-28 14:34:16 selector_events 14835 4581600704 Using selector: KqueueSelector
+DEBUG 2020-12-28 14:34:24 selector_events 14848 4579478976 Using selector: KqueueSelector

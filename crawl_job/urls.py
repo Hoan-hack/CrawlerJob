@@ -13,7 +13,7 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
-from django.contrib import admin
+# from django.contrib import admin
 from django.urls import path
 from django.conf.urls import handler404
 
@@ -21,7 +21,7 @@ import crawl_job
 from crawl_job.views import job_title, job_detail, GetJobList, JobDetailList
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    # path('admin/', admin.site.urls),
     path('job_title/', job_title),
     path('job_detail/<int:job_id>/', job_detail),
     # path('job_list/', job_list),
