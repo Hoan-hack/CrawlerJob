@@ -2919,3 +2919,15 @@ WARNING 2020-12-23 18:29:30 log 10714 123145332604928 Not Found: /favicon.ico
 WARNING 2020-12-23 18:29:42 log 10714 123145332604928 Not Found: /job_list/
 DEBUG 2020-12-23 18:29:55 selector_events 10714 4535643584 Using selector: KqueueSelector
 DEBUG 2020-12-28 10:21:31 selector_events 11774 4395666880 Using selector: KqueueSelector
+WARNING 2020-12-28 10:36:05 log 12167 123145546833920 Not Found: /favicon.ico
+DEBUG 2020-12-28 10:36:42 selector_events 12167 4744936896 Using selector: KqueueSelector
+WARNING 2020-12-28 10:40:38 log 12193 123145560342528 Not Found: /favicon.ico
+WARNING 2020-12-28 10:40:47 log 12193 123145565597696 Not Found: /job_list/
+DEBUG 2020-12-28 10:40:59 selector_events 12193 4440358336 Using selector: KqueueSelector
+INFO 2020-12-28 10:43:35 autoreload 12218 4374412736 /Users/admin/djangoProject/crawl_job/crawl_job/urls.py changed, reloading.
+DEBUG 2020-12-28 10:43:35 selector_events 12218 4374412736 Using selector: KqueueSelector
+WARNING 2020-12-28 10:43:41 log 12226 123145324552192 Not Found: /
+WARNING 2020-12-28 10:43:42 log 12226 123145324552192 Not Found: /favicon.ico
+WARNING 2020-12-28 10:43:47 log 12226 123145324552192 Not Found: /
+DEBUG 2020-12-28 10:43:52 selector_events 12226 4584861120 Using selector: KqueueSelector
+DEBUG 2020-12-28 10:44:29 selector_events 12246 4556172736 Using selector: KqueueSelector
