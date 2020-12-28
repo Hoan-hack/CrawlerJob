@@ -1,4 +1,4 @@
-import logging
+import logging.config
 
 from crawl_job.settings.base import BASE_DIR
 
