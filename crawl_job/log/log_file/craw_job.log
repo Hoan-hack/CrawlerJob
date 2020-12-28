@@ -3010,3 +3010,112 @@ DEBUG 2020-12-28 14:21:01 selector_events 14410 4766023104 Using selector: Kqueu
 DEBUG 2020-12-28 14:30:54 selector_events 14757 4459716032 Using selector: KqueueSelector
 DEBUG 2020-12-28 14:34:16 selector_events 14835 4581600704 Using selector: KqueueSelector
 DEBUG 2020-12-28 14:34:24 selector_events 14848 4579478976 Using selector: KqueueSelector
+INFO 2020-12-28 14:41:09 autoreload 15017 4704533952 /Users/admin/djangoProject/crawl_job/crawl_job/settings/base.py changed, reloading.
+DEBUG 2020-12-28 14:41:09 selector_events 15017 4704533952 Using selector: KqueueSelector
+ERROR 2020-12-28 14:41:21 log 15147 123145516072960 Internal Server Error: /
+Traceback (most recent call last):
+  File "/Users/admin/djangoProject/crawl_job/env/lib/python3.7/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/admin/djangoProject/crawl_job/env/lib/python3.7/site-packages/django/core/handlers/base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/admin/djangoProject/crawl_job/env/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/admin/djangoProject/crawl_job/env/lib/python3.7/site-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/admin/djangoProject/crawl_job/env/lib/python3.7/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/admin/djangoProject/crawl_job/env/lib/python3.7/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/admin/djangoProject/crawl_job/env/lib/python3.7/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/admin/djangoProject/crawl_job/env/lib/python3.7/site-packages/rest_framework/views.py", line 497, in dispatch
+    self.initial(request, *args, **kwargs)
+  File "/Users/admin/djangoProject/crawl_job/env/lib/python3.7/site-packages/rest_framework/views.py", line 414, in initial
+    self.perform_authentication(request)
+  File "/Users/admin/djangoProject/crawl_job/env/lib/python3.7/site-packages/rest_framework/views.py", line 324, in perform_authentication
+    request.user
+  File "/Users/admin/djangoProject/crawl_job/env/lib/python3.7/site-packages/rest_framework/request.py", line 227, in user
+    self._authenticate()
+  File "/Users/admin/djangoProject/crawl_job/env/lib/python3.7/site-packages/rest_framework/request.py", line 390, in _authenticate
+    self._not_authenticated()
+  File "/Users/admin/djangoProject/crawl_job/env/lib/python3.7/site-packages/rest_framework/request.py", line 400, in _not_authenticated
+    if api_settings.UNAUTHENTICATED_USER:
+  File "/Users/admin/djangoProject/crawl_job/env/lib/python3.7/site-packages/rest_framework/settings.py", line 225, in __getattr__
+    val = perform_import(val, attr)
+  File "/Users/admin/djangoProject/crawl_job/env/lib/python3.7/site-packages/rest_framework/settings.py", line 166, in perform_import
+    return import_from_string(val, setting_name)
+  File "/Users/admin/djangoProject/crawl_job/env/lib/python3.7/site-packages/rest_framework/settings.py", line 177, in import_from_string
+    return import_string(val)
+  File "/Users/admin/djangoProject/crawl_job/env/lib/python3.7/site-packages/django/utils/module_loading.py", line 17, in import_string
+    module = import_module(module_path)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1006, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/Users/admin/djangoProject/crawl_job/env/lib/python3.7/site-packages/django/contrib/auth/models.py", line 33, in <module>
+    class Permission(models.Model):
+  File "/Users/admin/djangoProject/crawl_job/env/lib/python3.7/site-packages/django/db/models/base.py", line 116, in __new__
+    "INSTALLED_APPS." % (module, name)
+RuntimeError: Model class django.contrib.auth.models.Permission doesn't declare an explicit app_label and isn't in an application in INSTALLED_APPS.
+WARNING 2020-12-28 14:41:23 log 15147 123145516072960 Not Found: /favicon.ico
+INFO 2020-12-28 14:49:33 autoreload 15147 4588092864 /Users/admin/djangoProject/crawl_job/crawl_job/settings/base.py changed, reloading.
+DEBUG 2020-12-28 14:49:33 selector_events 15147 4588092864 Using selector: KqueueSelector
+ERROR 2020-12-28 14:49:45 log 15365 123145343410176 Internal Server Error: /
+Traceback (most recent call last):
+  File "/Users/admin/djangoProject/crawl_job/env/lib/python3.7/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/admin/djangoProject/crawl_job/env/lib/python3.7/site-packages/django/core/handlers/base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/admin/djangoProject/crawl_job/env/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/admin/djangoProject/crawl_job/env/lib/python3.7/site-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/admin/djangoProject/crawl_job/env/lib/python3.7/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/admin/djangoProject/crawl_job/env/lib/python3.7/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/admin/djangoProject/crawl_job/env/lib/python3.7/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/admin/djangoProject/crawl_job/env/lib/python3.7/site-packages/rest_framework/views.py", line 497, in dispatch
+    self.initial(request, *args, **kwargs)
+  File "/Users/admin/djangoProject/crawl_job/env/lib/python3.7/site-packages/rest_framework/views.py", line 414, in initial
+    self.perform_authentication(request)
+  File "/Users/admin/djangoProject/crawl_job/env/lib/python3.7/site-packages/rest_framework/views.py", line 324, in perform_authentication
+    request.user
+  File "/Users/admin/djangoProject/crawl_job/env/lib/python3.7/site-packages/rest_framework/request.py", line 227, in user
+    self._authenticate()
+  File "/Users/admin/djangoProject/crawl_job/env/lib/python3.7/site-packages/rest_framework/request.py", line 390, in _authenticate
+    self._not_authenticated()
+  File "/Users/admin/djangoProject/crawl_job/env/lib/python3.7/site-packages/rest_framework/request.py", line 400, in _not_authenticated
+    if api_settings.UNAUTHENTICATED_USER:
+  File "/Users/admin/djangoProject/crawl_job/env/lib/python3.7/site-packages/rest_framework/settings.py", line 225, in __getattr__
+    val = perform_import(val, attr)
+  File "/Users/admin/djangoProject/crawl_job/env/lib/python3.7/site-packages/rest_framework/settings.py", line 166, in perform_import
+    return import_from_string(val, setting_name)
+  File "/Users/admin/djangoProject/crawl_job/env/lib/python3.7/site-packages/rest_framework/settings.py", line 177, in import_from_string
+    return import_string(val)
+  File "/Users/admin/djangoProject/crawl_job/env/lib/python3.7/site-packages/django/utils/module_loading.py", line 17, in import_string
+    module = import_module(module_path)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1006, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/Users/admin/djangoProject/crawl_job/env/lib/python3.7/site-packages/django/contrib/auth/models.py", line 33, in <module>
+    class Permission(models.Model):
+  File "/Users/admin/djangoProject/crawl_job/env/lib/python3.7/site-packages/django/db/models/base.py", line 116, in __new__
+    "INSTALLED_APPS." % (module, name)
+RuntimeError: Model class django.contrib.auth.models.Permission doesn't declare an explicit app_label and isn't in an application in INSTALLED_APPS.
+WARNING 2020-12-28 14:49:45 log 15365 123145343410176 Not Found: /favicon.ico
+INFO 2020-12-28 14:51:02 autoreload 15365 4760960448 /Users/admin/djangoProject/crawl_job/crawl_job/settings/base.py changed, reloading.
+WARNING 2020-12-28 14:51:11 log 15389 123145524764672 Not Found: /favicon.ico
+INFO 2020-12-28 14:51:36 autoreload 15389 4440165824 /Users/admin/djangoProject/crawl_job/crawl_job/settings/base.py changed, reloading.
+DEBUG 2020-12-28 14:51:45 selector_events 15417 4546653632 Using selector: KqueueSelector
+DEBUG 2020-12-28 14:51:52 selector_events 15430 4404276672 Using selector: KqueueSelector
