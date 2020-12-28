@@ -13,6 +13,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 from pathlib import Path
 import os
 
+SECRET_KEY = 'oldp5jr+na@k@(g!dxi4#ezxuz#^1tx_llia2*o9@o$tj)_zl$'
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 

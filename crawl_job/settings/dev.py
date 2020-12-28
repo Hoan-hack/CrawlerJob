@@ -1,6 +1,4 @@
 from .base import *
-
-SECRET_KEY = 'oldp5jr+na@k@(g!dxi4#ezxuz#^1tx_llia2*o9@o$tj)_zl$'
 DEBUG = True
 
 TIME_ZONE = 'Asia/Ho_Chi_Minh'
