@@ -2934,3 +2934,70 @@ DEBUG 2020-12-28 10:44:29 selector_events 12246 4556172736 Using selector: Kqueu
 WARNING 2020-12-28 10:57:43 log 12734 123145561210880 Not Found: /favicon.ico
 DEBUG 2020-12-28 10:58:27 selector_events 12734 4432735680 Using selector: KqueueSelector
 WARNING 2020-12-28 11:18:39 log 13128 123145504591872 Not Found: /favicon.ico
+INFO 2020-12-28 11:24:58 autoreload 13128 4585004480 /Users/admin/djangoProject/crawl_job/crawl_job/settings/dev.py changed, reloading.
+DEBUG 2020-12-28 11:24:58 selector_events 13128 4585004480 Using selector: KqueueSelector
+INFO 2020-12-28 11:25:47 autoreload 13278 4552949184 /Users/admin/djangoProject/crawl_job/crawl_job/settings/dev.py changed, reloading.
+DEBUG 2020-12-28 11:25:47 selector_events 13278 4552949184 Using selector: KqueueSelector
+DEBUG 2020-12-28 11:25:51 selector_events 13297 4545805760 Using selector: KqueueSelector
+ERROR 2020-12-28 11:25:56 log 13308 123145351188480 Internal Server Error: /
+Traceback (most recent call last):
+  File "/Users/admin/djangoProject/crawl_job/env/lib/python3.7/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/admin/djangoProject/crawl_job/env/lib/python3.7/site-packages/django/core/handlers/base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/admin/djangoProject/crawl_job/env/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/admin/djangoProject/crawl_job/env/lib/python3.7/site-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/admin/djangoProject/crawl_job/env/lib/python3.7/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/admin/djangoProject/crawl_job/env/lib/python3.7/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/admin/djangoProject/crawl_job/env/lib/python3.7/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/admin/djangoProject/crawl_job/env/lib/python3.7/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/admin/djangoProject/crawl_job/crawl_job/views.py", line 78, in get
+    page = self.paginate_queryset(queryset)
+  File "/Users/admin/djangoProject/crawl_job/env/lib/python3.7/site-packages/rest_framework/generics.py", line 171, in paginate_queryset
+    return self.paginator.paginate_queryset(queryset, self.request, view=self)
+  File "/Users/admin/djangoProject/crawl_job/env/lib/python3.7/site-packages/rest_framework/pagination.py", line 206, in paginate_queryset
+    self.page = paginator.page(page_number)
+  File "/Users/admin/djangoProject/crawl_job/env/lib/python3.7/site-packages/django/core/paginator.py", line 73, in page
+    number = self.validate_number(number)
+  File "/Users/admin/djangoProject/crawl_job/env/lib/python3.7/site-packages/django/core/paginator.py", line 51, in validate_number
+    if number > self.num_pages:
+  File "/Users/admin/djangoProject/crawl_job/env/lib/python3.7/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/Users/admin/djangoProject/crawl_job/env/lib/python3.7/site-packages/django/core/paginator.py", line 100, in num_pages
+    if self.count == 0 and not self.allow_empty_first_page:
+  File "/Users/admin/djangoProject/crawl_job/env/lib/python3.7/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/Users/admin/djangoProject/crawl_job/env/lib/python3.7/site-packages/django/core/paginator.py", line 94, in count
+    return c()
+  File "/Users/admin/djangoProject/crawl_job/env/lib/python3.7/site-packages/django/db/models/query.py", line 411, in count
+    return self.query.get_count(using=self.db)
+  File "/Users/admin/djangoProject/crawl_job/env/lib/python3.7/site-packages/django/db/models/sql/query.py", line 515, in get_count
+    number = obj.get_aggregation(using, ['__count'])['__count']
+  File "/Users/admin/djangoProject/crawl_job/env/lib/python3.7/site-packages/django/db/models/sql/query.py", line 500, in get_aggregation
+    result = compiler.execute_sql(SINGLE)
+  File "/Users/admin/djangoProject/crawl_job/env/lib/python3.7/site-packages/django/db/models/sql/compiler.py", line 1143, in execute_sql
+    sql, params = self.as_sql()
+  File "/Users/admin/djangoProject/crawl_job/env/lib/python3.7/site-packages/django/db/models/sql/compiler.py", line 512, in as_sql
+    from_, f_params = self.get_from_clause()
+  File "/Users/admin/djangoProject/crawl_job/env/lib/python3.7/site-packages/django/db/models/sql/compiler.py", line 784, in get_from_clause
+    clause_sql, clause_params = self.compile(from_clause)
+  File "/Users/admin/djangoProject/crawl_job/env/lib/python3.7/site-packages/django/db/models/sql/compiler.py", line 430, in compile
+    sql, params = node.as_sql(self, self.connection)
+  File "/Users/admin/djangoProject/crawl_job/env/lib/python3.7/site-packages/django/db/models/sql/datastructures.py", line 157, in as_sql
+    base_sql = compiler.quote_name_unless_alias(self.table_name)
+  File "/Users/admin/djangoProject/crawl_job/env/lib/python3.7/site-packages/django/db/models/sql/compiler.py", line 421, in quote_name_unless_alias
+    r = self.connection.ops.quote_name(name)
+  File "/Users/admin/djangoProject/crawl_job/env/lib/python3.7/site-packages/django/db/backends/dummy/base.py", line 20, in complain
+    raise ImproperlyConfigured("settings.DATABASES is improperly configured. "
+django.core.exceptions.ImproperlyConfigured: settings.DATABASES is improperly configured. Please supply the ENGINE value. Check settings documentation for more details.
+WARNING 2020-12-28 11:25:57 log 13308 123145351188480 Not Found: /favicon.ico
+INFO 2020-12-28 11:26:10 autoreload 13308 4601621952 /Users/admin/djangoProject/crawl_job/crawl_job/settings/dev.py changed, reloading.
+DEBUG 2020-12-28 11:26:10 selector_events 13308 4601621952 Using selector: KqueueSelector
+INFO 2020-12-28 11:37:35 autoreload 13313 4650421696 /Users/admin/djangoProject/crawl_job/crawl_job/lib/common/common.py changed, reloading.
+DEBUG 2020-12-28 11:37:35 selector_events 13313 4650421696 Using selector: KqueueSelector
