@@ -6,20 +6,21 @@ import environ
 
 
 def main():
-    """run env """
-    env = environ.Env(
-        # set casting, default value
-        DEBUG=(bool, False)
-    )
-
-    # reading .env file
-    environ.Env.read_env()
-    """Run administrative tasks."""
-    # os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'crawl_job.settings.base')
-    if eval(env("dev")):
-        os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'crawl_job.settings.dev')
-    else:
-        os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'crawl_job.settings.prod')
+    # """run env """
+    # env = environ.Env(
+    #     # set casting, default value
+    #     DEBUG=(bool, False)
+    # )
+    #
+    # # reading .env file
+    # environ.Env.read_env()
+    # """Run administrative tasks."""
+    # # os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'crawl_job.settings.base')
+    # if eval(env("dev")):
+    #     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'crawl_job.settings.dev')
+    # else:
+    #     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'crawl_job.settings.prod')
+    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'crawl_job.settings.prod')
     try:
         from django.core.management import execute_from_command_line
     except ImportError as exc:

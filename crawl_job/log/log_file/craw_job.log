@@ -3457,3 +3457,4 @@ INFO 2020-12-28 16:11:49 autoreload 17413 4501540288 /Users/admin/djangoProject/
 INFO 2020-12-28 16:13:06 autoreload 17429 4580978112 /Users/admin/djangoProject/crawl_job/crawl_job/settings/prod.py changed, reloading.
 INFO 2020-12-28 16:13:22 autoreload 17434 4663266752 /Users/admin/djangoProject/crawl_job/crawl_job/settings/prod.py changed, reloading.
 INFO 2020-12-28 16:13:35 autoreload 17438 4631293376 /Users/admin/djangoProject/crawl_job/crawl_job/settings/prod.py changed, reloading.
+INFO 2020-12-29 11:38:43 autoreload 21713 4551728576 /Users/admin/djangoProject/crawl_job/crawl_job/settings/base.py changed, reloading.
