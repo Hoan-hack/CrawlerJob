@@ -44,7 +44,7 @@ def get_job_title():
                     "update_time": update_time
                     }
                 )
-                list_title = sorted(list_title, key=lambda k: k['ids'])
+                list_title = sorted(list_title, key=lambda k: k['job_id'])
             except Exception as e:
                 logger.debug(e)
         for job_title in list_title:
