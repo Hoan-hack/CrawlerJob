@@ -1,3 +1,6 @@
+import django
+django.setup()
+
 import requests
 from bs4 import BeautifulSoup
 
