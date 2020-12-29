@@ -9,4 +9,4 @@ Crawler job from another website
 ## Database
 >Postgree
 ## Example:
-https://bestjobit.herokuapp.com/
+>https://bestjobit.herokuapp.com/
