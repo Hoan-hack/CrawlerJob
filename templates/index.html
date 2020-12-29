@@ -1,0 +1,235 @@
+{% load static %}
+{% load rest_framework %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+
+	<link rel="stylesheet" href="{% static 'css/style.css' %}">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css">
+	<link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+	<link rel="stylesheet" href="{% static 'css/bootstrap-grid.css' %}">
+	<link rel="stylesheet" href="{% static 'css/bootstrap-reboot.css' %}">
+</head>
+<body>
+<div class="container-fluid">
+	<div class="container">
+		<div class="header sticky-top">
+			<nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark">
+				<a href="/" class="navbar-brand">IT JOBS</a>
+				<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse1">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+
+				<div class="collapse navbar-collapse" id="navbarCollapse1">
+					<div class="navbar-nav">
+						<a href="/" class="nav-item nav-link active">Home</a>
+						<a href="https://www.linkedin.com/in/ngo-hoan-119aaa17a/" class="nav-item nav-link">About</a>
+						<a href="https://www.linkedin.com/in/ngo-hoan-119aaa17a/" class="nav-item nav-link">Products</a>
+					</div>
+					<form class="form-inline ml-auto" method="post" action="/job_list/">
+						{% csrf_token %}
+						<input type="text" class="form-control mr-sm-2" name="job_keywords" placeholder="Search">
+						<button type="submit" class="btn btn-outline-light">Search</button>
+					</form>
+				</div>
+			</nav>
+		</div>
+		<div class="content">
+		{% block content %}
+			<div class="content-vew">
+				{% for job in json_result.data.results %}
+					<div class="row">
+						<div class="job-item">
+							<div class="col-md-1 job-id"># {{ job.job_id }}</div>
+							<div class="title">
+								<h2 class="col-md-9 title">
+									<a href="/job_detail_list/{{ job.job_id }}" target="_blank"><div class="col-md job-detail">{{ job.job_detail }}</div></a>
+								</h2>
+								<span class="tag-name col-md-3">
+									{% if job.tag != None %}
+										<a class="tag" id="colorpad">{{ job.tag }}</a>
+									{% endif %}
+								</span>
+							</div>
+							<div class="col-md-2 distance-time">{{ job.create_time }}</div>
+						</div>
+					</div>
+				{% endfor %}
+			</div>
+		{% endblock %}
+		</div>
+		{% block pagination %}
+		<div class="pagination-nav">
+			<nav aria-label="Page navigation example">
+				<ul class="pagination">
+					<li class="page-item "><a class="page-link pagina-prev" href={{ json_result.data.links.previous }}>Previous</a>
+					</li>
+					<li class="page-item"><a class="page-link" href="/?page=1">1</a></li>
+					<li class="page-item"><a class="page-link" href="/?page=2">2</a></li>
+					<li class="page-item"><a class="page-link" id="page_3" href="/?page=3">3</a></li>
+					<li class="page-item"><a class="page-link pagina-current-page" href="">{{ json_result.data.page }}</a></li>
+					<li class="page-item"><p class="page-link next_dot" href="">...</p></li>
+					<li class="page-item"><a class="page-link pagina-page-next" href=""></a></li>
+					<li class="page-item "><a class="page-link pagina-next"
+					                          href={{ json_result.data.links.next }}>Next</a></li>
+				</ul>
+			</nav>
+		</div>
+		{% endblock %}
+		<div class="footer">
+			<div class="footer-content">
+				<!-- Footer -->
+				<footer class="page-footer font-small bg-dark">
+
+					<div style="background-color: #e0a800;">
+						<div class="container">
+
+							<!-- Grid row-->
+							<div class="row py-4 d-flex align-items-center">
+
+								<!-- Grid column -->
+								<div class="col-md-6 col-lg-5 text-center text-md-left mb-4 mb-md-0">
+									<h6 class="mb-0">Get connected with us on social networks!</h6>
+								</div>
+								<!-- Grid column -->
+
+								<!-- Grid column -->
+								<div class="col-md-6 col-lg-7 text-center text-md-right">
+
+									<!-- Facebook -->
+									<a type="button" class="btn btn-social-icon btn-facebook btn-rounded" href="https://www.facebook.com/hoan.men">
+										<i class="fa fa-facebook mr-4"></i>
+									</a>
+									<!-- Twitter -->
+									<a class="btn btn-social-icon btn-twitter btn-rounded">
+										<i class="fa fa-twitter mr-4"> </i>
+									</a>
+									<!-- Google +-->
+									<a class="gplus-ic">
+										<i class="fa fa-google-plus mr-4"> </i>
+									</a>
+									<!--Linkedin -->
+									<a class="btn btn-social-icon btn-linkedin btn-rounded" href="https://www.linkedin.com/in/ngo-hoan-119aaa17a/">
+										<i class="fa fa-linkedin mr-4"> </i>
+									</a>
+									<!--Instagram-->
+									<a class="btn btn-social-icon btn-instagram btn-rounded">
+										<i class="fa fa-instagram white-text"> </i>
+									</a>
+
+								</div>
+								<!-- Grid column -->
+
+							</div>
+							<!-- Grid row-->
+
+						</div>
+					</div>
+
+					<!-- Footer Links -->
+					<div class="container text-center text-md-left mt-5 text-white">
+
+						<!-- Grid row -->
+						<div class="row mt-3">
+
+							<!-- Grid column -->
+							<div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+
+								<!-- Content -->
+								<h6 class="text-uppercase font-weight-bold">Hoan Ngo</h6>
+								<hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+								<p>This website is the example about crawler web, but data is real</p>
+
+							</div>
+							<!-- Grid column -->
+
+							<!-- Grid column -->
+							<div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+
+								<!-- Links -->
+								<h6 class="text-uppercase font-weight-bold">Products</h6>
+								<hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+								<p>
+									<a href="#!">MDBootstrap</a>
+								</p>
+								<p>
+									<a href="#!">MDWordPress</a>
+								</p>
+								<p>
+									<a href="#!">BrandFlow</a>
+								</p>
+								<p>
+									<a href="#!">Bootstrap Angular</a>
+								</p>
+
+							</div>
+							<!-- Grid column -->
+
+							<!-- Grid column -->
+							<div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+
+								<!-- Links -->
+								<h6 class="text-uppercase font-weight-bold">Useful links</h6>
+								<hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+								<p>
+									<a href="https://www.linkedin.com/in/ngo-hoan-119aaa17a/">Your Account</a>
+								</p>
+								<p>
+									<a href="#!">Become an Affiliate</a>
+								</p>
+								<p>
+									<a href="#!">Shipping Rates</a>
+								</p>
+								<p>
+									<a href="https://www.linkedin.com/in/ngo-hoan-119aaa17a/">Help</a>
+								</p>
+
+							</div>
+							<!-- Grid column -->
+
+							<!-- Grid column -->
+							<div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+
+								<!-- Links -->
+								<h6 class="text-uppercase font-weight-bold">Contact</h6>
+								<hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+								<p>
+									<i class="fa fa-home mr-3"></i> Ho Chi Minh City, Vietnam</p>
+								<p>
+									<i class="fa fa-envelope mr-3"></i> hoanngo.dev@gmail.com</p>
+								<p>
+									<i class="fa fa-phone mr-3"></i> + 84 789 444 553</p>
+
+							</div>
+							<!-- Grid column -->
+
+						</div>
+						<!-- Grid row -->
+
+					</div>
+					<!-- Footer Links -->
+
+					<!-- Copyright -->
+					<div class="footer-copyright text-center py-3 text-white">© 2020 Mod by:
+						<a href="https://mdbootstrap.com/"> Hoan Ngo</a>
+					</div>
+					<!-- Copyright -->
+
+				</footer>
+				<!-- Footer -->
+			</div>
+		</div>
+	</div>
+</div>
+{% block sript %}
+<script src="{% static 'js/home.js' %}"></script>
+{% endblock %}
+<script src="{% static 'js/jquery-3.2.1.slim.min.js' %}"></script>
+<script src="{% static 'js/bootstrap.js' %}"></script>
+<script src="{% static 'js/bootstrap.bundle.js' %}"></script>
+
+</body>
+</html>
