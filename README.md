@@ -7,6 +7,6 @@ Crawler job from another website
 - Beautiful Soup 
 - Django Rest Framework
 ## Database
-Postgree
+>Postgree
 ## Example:
 https://bestjobit.herokuapp.com/
