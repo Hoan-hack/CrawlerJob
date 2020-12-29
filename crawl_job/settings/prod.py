@@ -1,5 +1,8 @@
 from .base import *
 DEBUG = False
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", __file__)
+import django
+django.setup()
 
 TIME_ZONE = 'Asia/Ho_Chi_Minh'
 
