@@ -38,8 +38,8 @@ def calculate_time(time_stamp):
     hours = divmod(days[1], 3600)  # Use remainder of days to calc hours
     minutes = divmod(hours[1], 60)  # Use remainder of hours to calc minutes
     # seconds = divmod(minutes[1], 1)  # Use remainder of minutes to calc seconds
-    if days == 0:
-        if hours == 0:
+    if days[0] <= 0:
+        if hours[0] <= 0:
             return "{minutes} min ago".format(minutes=int(minutes[0]))
         else:
             return "{hours} hours ago".format(hours=int(hours[0]))
